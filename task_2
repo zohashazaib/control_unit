@@ -1,0 +1,11 @@
+module ALU_Control
+(
+  input [1:0] Opcode,
+  input [3:0] Funct,
+  
+  output reg [3:0]Operation                                                         
+ );
+ 
+ if (ALUOp= 0000)
+ Operation = 
+ 
