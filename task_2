@@ -6,6 +6,22 @@ module ALU_Control
   output reg [3:0]Operation                                                         
  );
  
- if (ALUOp= 0000)
- Operation = 
+ if (ALUOp== 2'b00)
+ Operation = 4'b0011;
  
+  if (ALUOp== 2'b01)
+ Operation = 4'b0110;
+ 
+  if (ALUOp== 2'b10 && Funct== 4'b0000)
+ Operation = 4'b0010;
+ 
+  if (ALUOp== 2'b10 && Funct== 4'b1000)
+ Operation = 4'b0110;
+ 
+   if (ALUOp== 2'b10 && Funct== 4'b0111)
+ Operation = 4'b0000;
+ 
+   if (ALUOp== 2'b10 && Funct== 4'b0110)
+ Operation = 4'b0001;
+ 
+ endmodule
